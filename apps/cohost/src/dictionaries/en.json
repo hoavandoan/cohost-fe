@@ -1,0 +1,9 @@
+{
+	"home": {
+		"welcome": "Welcome"
+	},
+	"counter": {
+		"increment": "Increment",
+		"decrement": "Decrement"
+	}
+}

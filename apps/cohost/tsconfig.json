@@ -1,0 +1,12 @@
+{
+  "extends": "@cohost/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@cohost/*": ["../../packages/ui/src/components/*"],
+      "@cohost/ui/lib/*": ["../../packages/ui/src/lib/*"],
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

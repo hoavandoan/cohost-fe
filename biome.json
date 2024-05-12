@@ -1,0 +1,13 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+  "extends": ["@cohosts/biome-config/biome"],
+  "formatter": {
+    "ignore": [
+      "node_modules/*",
+      "*.config.*",
+      "*.json",
+      "tsconfig.json",
+      ".turbo"
+    ]
+  }
+}

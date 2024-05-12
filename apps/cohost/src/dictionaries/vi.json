@@ -1,0 +1,9 @@
+{
+	"home": {
+		"welcome": "Chào mừng"
+	},
+	"counter": {
+		"increment": "Tăng",
+		"decrement": "Giảm"
+	}
+}

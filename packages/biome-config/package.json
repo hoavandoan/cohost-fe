@@ -1,0 +1,13 @@
+{
+  "name": "@cohost/biome-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./biome": "./biome.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3"
+  }
+}

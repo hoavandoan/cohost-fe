@@ -3,14 +3,18 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build:cohost": "bun run build --filter=./apps/cohost",
+    "build:dayladau": "bun run build --filter=./apps/dayladau",
+    "dev": "turbo dev --no-cache --parallel --continue",
+    "dev:cohost": "bun run dev --filter=!./apps/dayladau",
+    "dev:dayladau": "bun run dev --filter=!./apps/cohost",
+    "start": "turbo start",
+    "format": "turbo format --continue --",
+    "lint": "turbo lint --continue --",
+    "check": "turbo check --continue --",
+    "clean": "turbo clean --continue -- && rm -rf node_modules && rm -rf .turbo && bun install"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "prettier": "^3.2.5",
     "turbo": "latest"
   },
   "engines": {
