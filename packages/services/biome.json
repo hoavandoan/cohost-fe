@@ -1,0 +1,15 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+	"extends": ["@cohost/biome-config/biome"],
+	"files": {
+		"ignore": ["dist/**", ".next/**", ".turbo"]
+	},
+	"linter": {
+		"rules": {
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noConfusingVoidType": "off"
+			}
+		}
+	}
+}

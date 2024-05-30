@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { Navbar } from "@/app/[lang]/dashboard/_components/Navbar";
-import { Sidebar } from "@/app/[lang]/dashboard/_components/Sidebar";
-import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
-import { cn } from "@cohost/ui/lib/utils";
+import { Navbar } from "@/app/[lang]/dashboard/_components/navbar"
+import { Sidebar } from "@/app/[lang]/dashboard/_components/sidebar"
+import { useSidebarToggle } from "@/hooks/use-sidebar-toggle"
+import { cn } from "@cohost/ui/lib/utils"
 
 export default function DemoLayout({
-	children,
+	children
 }: {
-	children: React.ReactNode;
+	children: React.ReactNode
 }) {
-	const sidebar = useSidebarToggle();
+	const sidebar = useSidebarToggle()
 
 	return (
 		<>
@@ -18,7 +18,7 @@ export default function DemoLayout({
 			<main
 				className={cn(
 					"min-h-[calc(100vh_-_56px)] bg-zinc-50 dark:bg-zinc-900 transition-[margin-left] ease-in-out duration-300",
-					sidebar?.isOpen === false ? "lg:ml-[90px]" : "lg:ml-72",
+					sidebar?.isOpen === false ? "lg:ml-[90px]" : "lg:ml-72"
 				)}
 			>
 				<Navbar />
@@ -27,11 +27,11 @@ export default function DemoLayout({
 			<footer
 				className={cn(
 					"transition-[margin-left] ease-in-out duration-300",
-					sidebar?.isOpen === false ? "lg:ml-[90px]" : "lg:ml-72",
+					sidebar?.isOpen === false ? "lg:ml-[90px]" : "lg:ml-72"
 				)}
 			>
 				{/*<Footer />*/}
 			</footer>
 		</>
-	);
+	)
 }

@@ -4,9 +4,9 @@ import {
 	BreadcrumbLink,
 	BreadcrumbList,
 	BreadcrumbPage,
-	BreadcrumbSeparator,
-} from "@cohost/ui/breadcrumb";
-import Link from "next/link";
+	BreadcrumbSeparator
+} from "@cohost/ui/breadcrumb"
+import Link from "next/link"
 
 const Page = () => {
 	return (
@@ -31,7 +31,7 @@ const Page = () => {
 				</BreadcrumbList>
 			</Breadcrumb>
 		</div>
-	);
-};
+	)
+}
 
-export default Page;
+export default Page

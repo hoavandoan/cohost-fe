@@ -1,3 +1,4 @@
+import type { Option } from "@/types"
 import {
 	ArrowDownIcon,
 	ArrowRightIcon,
@@ -6,24 +7,23 @@ import {
 	CheckCircleIcon,
 	CircleHelpIcon,
 	CircleIcon,
-	LoaderIcon,
-} from "lucide-react";
-import { Option } from '@/types';
+	LoaderIcon
+} from "lucide-react"
 
 export const labels = [
 	{
 		value: "bug",
-		label: "Bug",
+		label: "Bug"
 	},
 	{
 		value: "feature",
-		label: "Feature",
+		label: "Feature"
 	},
 	{
 		value: "documentation",
-		label: "Documentation",
-	},
-];
+		label: "Documentation"
+	}
+]
 
 export const statuses = [
 	{
@@ -55,23 +55,23 @@ export const statuses = [
 		label: "Canceled",
 		icon: BanIcon,
 		withCount: true
-	},
-] as Option[];
+	}
+] as Option[]
 
 export const priorities = [
 	{
 		label: "Low",
 		value: "low",
-		icon: ArrowDownIcon,
+		icon: ArrowDownIcon
 	},
 	{
 		label: "Medium",
 		value: "medium",
-		icon: ArrowRightIcon,
+		icon: ArrowRightIcon
 	},
 	{
 		label: "High",
 		value: "high",
-		icon: ArrowUpIcon,
-	},
-];
+		icon: ArrowUpIcon
+	}
+]

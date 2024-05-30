@@ -1,6 +1,6 @@
-"use client";
-import { Button } from "@cohost/ui/button";
-import Link from "next/link";
+"use client"
+import { Button } from "@cohost/ui/button"
+import Link from "next/link"
 
 const NotFound = () => {
 	return (
@@ -22,7 +22,7 @@ const NotFound = () => {
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}
 
-export default NotFound;
+export default NotFound

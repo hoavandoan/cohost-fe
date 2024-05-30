@@ -3,36 +3,39 @@ import {
 	CandlestickChart,
 	LayoutGrid,
 	LifeBuoy,
+	type LucideIcon,
 	Mailbox,
 	MessageCircleIcon,
 	Settings,
 	SquarePen,
 	Tag,
-	Users,
-} from "lucide-react";
+	Users
+} from "lucide-react"
 
 type Submenu = {
-	href: string;
-	label: string;
-	active: boolean;
-};
+	href: string
+	label: string
+	active: boolean
+}
 
 type Menu = {
-	href: string;
-	label: string;
-	active: boolean;
-	icon: any;
-	submenus: Submenu[];
-};
+	href: string
+	label: string
+	active: boolean
+	icon: LucideIcon
+	submenus: Submenu[]
+}
 
 type Group = {
-	groupLabel: string;
-	menus: Menu[];
-};
+	id: number
+	groupLabel: string
+	menus: Menu[]
+}
 
 export function getSidebars(pathname: string): Group[] {
 	return [
 		{
+			id: 1,
 			groupLabel: "",
 			menus: [
 				{
@@ -40,11 +43,12 @@ export function getSidebars(pathname: string): Group[] {
 					label: "Dashboard",
 					active: pathname.endsWith("/dashboard"),
 					icon: LayoutGrid,
-					submenus: [],
-				},
-			],
+					submenus: []
+				}
+			]
 		},
 		{
+			id: 2,
 			groupLabel: "",
 			menus: [
 				{
@@ -52,11 +56,12 @@ export function getSidebars(pathname: string): Group[] {
 					label: "Reservations",
 					active: pathname.includes("/reservations"),
 					icon: LifeBuoy,
-					submenus: [],
-				},
-			],
+					submenus: []
+				}
+			]
 		},
 		{
+			id: 3,
 			groupLabel: "",
 			menus: [
 				{
@@ -64,11 +69,12 @@ export function getSidebars(pathname: string): Group[] {
 					label: "Messages",
 					active: pathname.includes("/messages"),
 					icon: MessageCircleIcon,
-					submenus: [],
-				},
-			],
+					submenus: []
+				}
+			]
 		},
 		{
+			id: 4,
 			groupLabel: "",
 			menus: [
 				{
@@ -80,46 +86,47 @@ export function getSidebars(pathname: string): Group[] {
 						{
 							href: "/posts",
 							label: "All Posts",
-							active: pathname === "/posts",
+							active: pathname === "/posts"
 						},
 						{
 							href: "/posts/new",
 							label: "New Post",
-							active: pathname === "/posts/new",
-						},
-					],
+							active: pathname === "/posts/new"
+						}
+					]
 				},
 				{
 					href: "/finance",
 					label: "Finance",
 					active: pathname.includes("/finance"),
 					icon: CandlestickChart,
-					submenus: [],
+					submenus: []
 				},
 				{
 					href: "/listing",
 					label: "Listing",
 					active: pathname.includes("/listing"),
 					icon: Tag,
-					submenus: [],
+					submenus: []
 				},
 				{
 					href: "/calendar",
 					label: "Calendar",
 					active: pathname.includes("/calendar"),
 					icon: CalendarDays,
-					submenus: [],
+					submenus: []
 				},
 				{
 					href: "/dashboard/mailbox",
 					label: "Mailbox",
 					active: pathname.includes("/dashboard/mailbox"),
 					icon: Mailbox,
-					submenus: [],
-				},
-			],
+					submenus: []
+				}
+			]
 		},
 		{
+			id: 5,
 			groupLabel: "Settings",
 			menus: [
 				{
@@ -127,16 +134,16 @@ export function getSidebars(pathname: string): Group[] {
 					label: "Users",
 					active: pathname.includes("/users"),
 					icon: Users,
-					submenus: [],
+					submenus: []
 				},
 				{
 					href: "/account",
 					label: "Account",
 					active: pathname.includes("/account"),
 					icon: Settings,
-					submenus: [],
-				},
-			],
-		},
-	];
+					submenus: []
+				}
+			]
+		}
+	]
 }

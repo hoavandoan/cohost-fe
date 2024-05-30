@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "lib": ["dom", "ES2015"],
+    },
+    "extends": "@cohost/typescript-config/react-library.json",
+    "include": ["."],
+    "exclude": ["dist", "build", "node_modules", "src/services.ts"]
+}
